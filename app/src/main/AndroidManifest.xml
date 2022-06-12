@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appdet.theguttbusters">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheGuttBusters">
+        <activity
+            android:name=".endpg"
+            android:exported="false" />
+        <activity
+            android:name=".hpwk6"
+            android:exported="false" />
+        <activity
+            android:name=".hpwk5"
+            android:exported="false" />
+        <activity
+            android:name=".hpwk4"
+            android:exported="false" />
+        <activity
+            android:name=".hpwk3"
+            android:exported="false" />
+        <activity
+            android:name=".hpwk2"
+            android:exported="false" />
+        <activity
+            android:name=".hpwk1"
+            android:exported="false" />
+        <activity
+            android:name=".chwk6"
+            android:exported="false" />
+        <activity
+            android:name=".chwk5"
+            android:exported="false" />
+        <activity
+            android:name=".chwk4"
+            android:exported="false" />
+        <activity
+            android:name=".chwk3"
+            android:exported="false" />
+        <activity
+            android:name=".chwk2"
+            android:exported="false" />
+        <activity
+            android:name=".chwk1"
+            android:exported="false" />
+        <activity
+            android:name=".abswk6"
+            android:exported="false" />
+        <activity
+            android:name=".abswk5"
+            android:exported="false" />
+        <activity
+            android:name=".abswk4"
+            android:exported="false" />
+        <activity
+            android:name=".abswk3"
+            android:exported="false" />
+        <activity
+            android:name=".abswk2"
+            android:exported="false" />
+        <activity
+            android:name=".abswk1"
+            android:exported="false" />
+        <activity
+            android:name=".beta"
+            android:exported="false" />
+        <activity
+            android:name=".Tuts1"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

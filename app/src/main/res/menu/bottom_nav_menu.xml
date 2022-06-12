@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/exercise"
+        android:title="Execise"
+        android:icon="@drawable/ic_fitness"/>
+    <item
+        android:id="@+id/setings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"/>
+</menu>

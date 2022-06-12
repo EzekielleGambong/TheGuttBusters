@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">GuttBusters</string>
+    <string-array name="mainfoc">
+        <item>  Your Main Focus</item>
+        <item>Lose Weight</item>
+        <item>Maintain Weight</item>
+        <item>Gain Weight</item>
+        <item>Gain Muscles</item>
+        <item>Modify My Diet</item>
+        <item>Manage Stress</item>
+        <item>Increase My Step Count</item>
+    </string-array>
+
+    <string-array name="actlvl">
+        <item>  Baseline Activity Level</item>
+        <item>Not Very Actiive</item>
+        <item>Lightly Active</item>
+        <item>Active</item>
+        <item>Very Active</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>  Gender</item>
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Headings
+    <string name="heading_one">Be Fit</string>
+    <string name="heading_two">Be Motivated</string>
+    <string name="heading_three">Be Disciplined</string>
+    <string name="heading_fourth">ENJOY THE APP!</string>
+
+    //Description
+    <string name="desc_one">Harness the experience of seasoned wellness workouts and nutrition.</string>
+    <string name="desc_two">Watch and Read the advice of other people.</string>
+    <string name="desc_three">Search Healthy selection that is right for your certain diet</string>
+    <string name="desc_fourth">Plan, Edit, Follow Guides</string>
+    <string name="title_activity_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="job_success">Job Success</string>
+    <string name="ui_ux_designer">UI/UX Designer</string>
+    <string name="my_desc">Doing at the sweet spot between aesthetics and elegance to give life to your brand.My opinion belong to nobody but myself.</string>
+    <string name="about_me">About Me</string>
+    <string name="contact">Personal Info</string>
+    <string name="skills">Contact Info</string>
+    <string name="ratings">Star Ratings</string>
+    <string name="samplereview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium bibendum sapien, ut euismod massa. Duis convallis sem sed turpis elementum auctor.</string>
+
+
+    //Beta
+    <!-- Base application theme. -->
+
+
+    -
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+
+        <!--custom animation style-->
+
+
+    </style>
+
+
+    <style name="DialogAnimation">
+
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+
+    </style>
+</resources>
