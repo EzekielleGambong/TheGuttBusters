@@ -60,12 +60,9 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="368dp"
                     android:layout_height="90dp"
-                    android:digits="1234567890"
                     android:hint="Phone Number"
-                    android:maxLength="11"
                     app:boxStrokeColor="#39AFEA"
                     app:counterEnabled="true"
-                    app:counterMaxLength="11"
                     app:endIconMode="clear_text"
                     app:helperText="Required*"
                     app:helperTextTextColor="@color/red"
@@ -74,7 +71,9 @@
                     app:startIconDrawable="@drawable/uiphone">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/qtwo"
+                        android:id="@+id/qone"
+                        android:maxLength="11"
+                        android:digits="1234567890"
                         android:layout_width="368dp"
                         android:layout_height="60dp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +91,6 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:digits="abcdefghigklmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
                     android:hint="Password"
                     app:boxStrokeColor="#39AFEA"
                     app:endIconMode="clear_text"
@@ -100,7 +98,8 @@
                     app:startIconDrawable="@drawable/passlock">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/qone"
+                        android:id="@+id/qtwo"
+                        android:digits="abcdefghigklmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
