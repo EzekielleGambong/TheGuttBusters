@@ -52,6 +52,7 @@ public class abswk1 extends AppCompatActivity {
         bgprogress = (View) findViewById(R.id.bgprogress);
 
         fitone = (LinearLayout) findViewById(R.id.fitone);
+        //jk
 
         imgTimer = (ImageView) findViewById(R.id.imgtimer);
 
