@@ -34,7 +34,7 @@ public class abswk4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abswk4);
 
-        //Load Animations
+        //Load Animations uwu
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree);
         bttfour = AnimationUtils.loadAnimation(this, R.anim.bttfour);
         ttbone = AnimationUtils.loadAnimation(this, R.anim.ttbone);
