@@ -1,9 +1,13 @@
 package com.appdet.theguttbusters;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatCheckBox;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +26,9 @@ public class Login extends AppCompatActivity {
     private Button moveBack2MainFLogin,nextToMainApp;
     EditText  User, Password;
     DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://theguttbusters-default-rtdb.firebaseio.com/");
-
+    private android.widget.EditText validatePassword, validatePhoneNum;
+    private AppCompatCheckBox showpass;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,9 @@ public class Login extends AppCompatActivity {
         TextInputLayout wtwo = findViewById(R.id.wtwo);
         Button loginbtn = findViewById(R.id.loginbtn);
         TextView signup = findViewById(R.id.signText);
+        validatePassword = findViewById(R.id.wtwo);
+        validatePhoneNum = findViewById(R.id.wone);
+        showpass = findViewById(R.id.cbShowpass);
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +104,25 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        showpass.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (!isChecked) {
+                // show password
+                validatePassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
 
+            } else {
+                // hide password
+                validatePassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            }
+        });
+    }
 
+    public void btnClick(View view){
+        if(validatePassword.getText().length()==0)
+        {
+            validatePassword.setError("Field cannot be left blank.");
+        }
+        if (validatePhoneNum.getText().length()==0){
+            validatePhoneNum.setError("Feild cannot be left blank.");
+        }
     }
 }
