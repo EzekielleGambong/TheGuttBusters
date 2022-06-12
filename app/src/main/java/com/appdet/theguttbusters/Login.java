@@ -37,8 +37,8 @@ public class Login extends AppCompatActivity {
         TextInputLayout wtwo = findViewById(R.id.wtwo);
         Button loginbtn = findViewById(R.id.loginbtn);
         TextView signup = findViewById(R.id.signText);
-        validatePassword = findViewById(R.id.qone);
-        validatePhoneNum = findViewById(R.id.qtwo);
+        validatePhoneNum = findViewById(R.id.qone);
+        validatePassword = findViewById(R.id.qtwo);
         showpass = findViewById(R.id.cbShowpass);
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +103,7 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         showpass.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (!isChecked) {
