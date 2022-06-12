@@ -1,8 +1,11 @@
 package com.appdet.theguttbusters;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -21,7 +24,10 @@ public class abswk5 extends AppCompatActivity {
     View divpage, bgprogress;
     LinearLayout fitone;
     ImageView imgTimer;
-
+    //copy
+    TextView data;
+    Double sum=0.0, add=4.0, addtxt;
+    //
     private static final long START_TIME_IN_MILLIS = 90000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
@@ -64,7 +70,55 @@ public class abswk5 extends AppCompatActivity {
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
 
+        //copy
+        data = (TextView) findViewById(R.id.data);
+        bgprogress.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        data.setVisibility(View.GONE);
+
+
+
+        String haha4 = getIntent().getStringExtra("try4");
+        data.setText(haha4);
+
         startTimer();
+
+        data.getText().toString();
+        if(data.getText().toString().length() > 0)
+            addtxt = Double.parseDouble(data.getText().toString());
+
+        sum = add + addtxt;
+        data.setText(Double.toString(sum));
+        btnexercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(abswk5.this);
+                alert_builder.setMessage("Do you want to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String get5 = data.getText().toString();
+                                Intent intent = new Intent(abswk5.this, abswk6.class);
+                                intent.putExtra("try5", get5);
+
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+        ///////
     }
 
     private void startTimer(){
@@ -77,7 +131,12 @@ public class abswk5 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Toast.makeText(getApplicationContext(),"Done!", Toast.LENGTH_SHORT).show();
+                //copy
+                bgprogress.setVisibility(View.VISIBLE);
+                btnexercise.setVisibility(View.VISIBLE);
+
+
+                //
             }
         }.start();
         mTimerRunning = true;

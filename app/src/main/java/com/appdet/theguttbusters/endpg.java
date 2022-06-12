@@ -24,7 +24,7 @@ public class endpg extends AppCompatActivity {
     Animation l2r, r2l, top, bot;
     ImageView congrats, goal, blue, orange, purple, girl, dots;
     View btmbox;
-    TextView btmtxt, timerValue;
+    TextView btmtxt, timerValue, oof;
     private static final long START_TIME_IN_MILLIS = 5000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
@@ -52,6 +52,7 @@ public class endpg extends AppCompatActivity {
         dots = findViewById(R.id.iv_dots);
         btmbox = findViewById(R.id.btmbox);
         btmtxt = findViewById(R.id.btmtxt);
+        oof = findViewById(R.id.oof);
         timerValue = (TextView) findViewById(R.id.timerValue);
         //Set animation to elements
         congrats.setAnimation(top);
@@ -66,7 +67,8 @@ public class endpg extends AppCompatActivity {
         btmtxt.setVisibility(View.GONE);
         timerValue.setVisibility(View.GONE);
         startTimer();
-
+        String haha6 = getIntent().getStringExtra("try6");
+        oof.setText(haha6);
 
     }
 
