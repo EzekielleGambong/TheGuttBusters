@@ -66,8 +66,8 @@ public class abswk2 extends AppCompatActivity {
 
 
 
-        String haha = getIntent().getStringExtra("try");
-        fitonetitle.setText(haha);
+        String haha1 = getIntent().getStringExtra("try1");
+        fitonetitle.setText(haha1);
         startTimer();
     }
 

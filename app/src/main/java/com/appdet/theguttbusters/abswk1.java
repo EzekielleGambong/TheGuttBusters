@@ -3,6 +3,7 @@ package com.appdet.theguttbusters;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -21,6 +22,7 @@ public class abswk1 extends AppCompatActivity {
     View divpage, bgprogress;
     LinearLayout fitone;
     ImageView imgTimer;
+    Double sum=0.0, add=0.0;
 
     private static final long START_TIME_IN_MILLIS = 37500;
     private CountDownTimer countDownTimer;
@@ -46,17 +48,17 @@ public class abswk1 extends AppCompatActivity {
         fitonetitle = (TextView) findViewById(R.id.fitonetitle);
         timerValue = (TextView) findViewById(R.id.timerValue);
         btnexercise = (TextView) findViewById(R.id.btnexercise);
-        data = (TextView) findViewById(R.id.data);
+
 
         divpage = (View) findViewById(R.id.divpage);
         bgprogress = (View) findViewById(R.id.bgprogress);
 
         fitone = (LinearLayout) findViewById(R.id.fitone);
-        //jk
+
 
         imgTimer = (ImageView) findViewById(R.id.imgtimer);
 
-        //assign animation
+
         btnexercise.startAnimation(bttfour);
         bgprogress.startAnimation(btthree);
         fitone.startAnimation(ttbone);
@@ -67,7 +69,14 @@ public class abswk1 extends AppCompatActivity {
         imgTimer.startAnimation(alphago);
 
 
+        //copy
+        data = (TextView) findViewById(R.id.data);
+        bgprogress.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        data.setVisibility(View.GONE);
 
+
+        //copy
         String haha = getIntent().getStringExtra("try");
         data.setText(haha);
         startTimer();
@@ -83,7 +92,23 @@ public class abswk1 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Toast.makeText(getApplicationContext(),"Done!", Toast.LENGTH_SHORT).show();
+                //copy
+                bgprogress.setVisibility(View.VISIBLE);
+                btnexercise.setVisibility(View.VISIBLE);
+                data.getText().toString();
+                if(data.getText().toString().length() > 0)
+                    add = Double.parseDouble(data.getText().toString());
+                sum = sum+add;
+                data.setText(Double.toString(sum));
+
+
+                String get1 = data.getText().toString();
+                Intent intent = new Intent(abswk1.this, abswk2.class);
+                intent.putExtra("try1", get1);
+
+                startActivity(intent);
+
+
             }
         }.start();
         mTimerRunning = true;
