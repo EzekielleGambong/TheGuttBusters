@@ -25,8 +25,8 @@ public class abswk1 extends AppCompatActivity {
     LinearLayout fitone;
     ImageView imgTimer;
     //copy
-    TextView data;
-    Double sum=0.0, add=3.5, addtxt;
+    TextView data, dataz;
+    Double sum=0.0, add=3.5, addtxt, finz=0.0;
     //
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
@@ -75,6 +75,7 @@ public class abswk1 extends AppCompatActivity {
 
         //copy
         data = (TextView) findViewById(R.id.data);
+        dataz = (TextView) findViewById(R.id.dataz);
         bgprogress.setVisibility(View.GONE);
         btnexercise.setVisibility(View.GONE);
         data.setVisibility(View.GONE);
@@ -82,7 +83,9 @@ public class abswk1 extends AppCompatActivity {
 
 
         String haha = getIntent().getStringExtra("try");
+        String hahaz = getIntent().getStringExtra("tryz");
         data.setText(haha);
+        dataz.setText(hahaz);
 
         startTimer();
 
