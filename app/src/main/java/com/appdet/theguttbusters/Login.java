@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
     private Button moveBack2MainFLogin,nextToMainApp;
     EditText  User, Password;
     DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://theguttbusters-default-rtdb.firebaseio.com/");
-    private android.widget.EditText validatePassword, validatePhoneNum;
+    private android.widget.EditText phoneL, passL;
     private AppCompatCheckBox showpass;
     @SuppressLint("WrongViewCast")
     @Override
@@ -37,8 +37,8 @@ public class Login extends AppCompatActivity {
         TextInputLayout wtwo = findViewById(R.id.wtwo);
         Button loginbtn = findViewById(R.id.loginbtn);
         TextView signup = findViewById(R.id.signText);
-        validatePhoneNum = findViewById(R.id.qone);
-        validatePassword = findViewById(R.id.qtwo);
+        phoneL = findViewById(R.id.qone);
+        passL = findViewById(R.id.qtwo);
         showpass = findViewById(R.id.cbShowpass);
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -108,22 +108,21 @@ public class Login extends AppCompatActivity {
         showpass.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (!isChecked) {
                 // show password
-                validatePassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                passL.setTransformationMethod(PasswordTransformationMethod.getInstance());
 
             } else {
                 // hide password
-                validatePassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                passL.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
             }
         });
     }
 
     public void btnClick(View view){
-        if(validatePassword.getText().length()==0)
-        {
-            validatePassword.setError("Field cannot be left blank.");
+        if(passL.getText().length()==0) {
+            passL.setError("Field cannot be left blank.");
         }
-        if (validatePhoneNum.getText().length()==0){
-            validatePhoneNum.setError("Feild cannot be left blank.");
+        if (phoneL.getText().length()==0){
+            phoneL.setError("Field cannot be left blank.");
         }
     }
 }

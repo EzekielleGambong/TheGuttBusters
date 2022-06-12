@@ -1,14 +1,19 @@
 package com.appdet.theguttbusters;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatCheckBox;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.icu.text.Transliterator;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -23,20 +28,25 @@ public class Register extends AppCompatActivity  {
     private Button moveBack2MainFRegis;
     EditText name, contact, dob;
     TextView viss;
-
+    private android.widget.EditText passH, phoneH, userH, nameH, genderH;
+    private AppCompatCheckBox checkbox;
     //DBHelper DB;
 
     TextInputLayout one, two, tri, por, payb;
     FirebaseDatabase rootNode;
     DatabaseReference refrence;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-
-
+        checkbox = findViewById(R.id.cbShowpassRegis);
+        phoneH = findViewById(R.id.oneInputEditText);
+        userH = findViewById(R.id.twoInputEditText);
+        nameH = findViewById(R.id.triInputEditText);
+        genderH = findViewById(R.id.porInputEditText);
+        passH = findViewById(R.id.paybInputEditText);
         one = findViewById(R.id.one);
         two = findViewById(R.id.two);
         tri = findViewById(R.id.tri);
@@ -54,30 +64,49 @@ public class Register extends AppCompatActivity  {
             }
         });
 
-
-
-
-
-
+        checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (!isChecked) {
+                    // show password
+                    passH.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    // hide password
+                    passH.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
 
     }
-    private Boolean validateName(){
-        String val = one.getEditText().getText().toString();
-
-        if(val.isEmpty()){
-            one.setError("Field cannot be empty");
-            return false;
-        }
-        else{
-            one.setError(null);
-            return true;
-        }
-    }
+//    private Boolean validateName(){
+//        String val = one.getEditText().getText().toString();
+//
+//        if(val.isEmpty()){
+//            one.setError("Field cannot be empty");
+//            return false;
+//        }
+//        else{
+//            one.setError(null);
+//            return true;
+//        }
+//    }
 
     public void registerBtn(View view){
 
-        if (!validateName()){
-            return;
+        if(phoneH.getText().length()==0) {
+            phoneH.setError("Field cannot be left blank.");
+        }
+        if(userH.getText().length()==0){
+            userH.setError("Field cannot be left blank.");
+        }
+        if(nameH.getText().length()==0){
+            nameH.setError("Field cannot be left blank.");
+        }
+        if(genderH.getText().length()==0){
+            genderH.setError("Field cannot be left blank.");
+        }
+        if(passH.getText().length()==0){
+            passH.setError("Field cannot be left blank.");
         }
 
         rootNode = FirebaseDatabase.getInstance();
@@ -95,9 +124,5 @@ public class Register extends AppCompatActivity  {
         refrence.child(phoneNo).setValue(helperClass);
 
     }
-
-
-
-
 
 }
