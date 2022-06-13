@@ -103,7 +103,7 @@ public class abswk2 extends AppCompatActivity {
             finztxt = Double.parseDouble(dataz.getText().toString());
 
         sum = add + addtxt;
-        finz = sum * finztxt;
+
         data.setText(Double.toString(finz));
         btnexercise.setOnClickListener(new View.OnClickListener() {
             @Override

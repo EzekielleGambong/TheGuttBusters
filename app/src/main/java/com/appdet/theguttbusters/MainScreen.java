@@ -120,10 +120,11 @@ public class MainScreen extends AppCompatActivity {
 
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
-                                String getzz = imagine.getText().toString();
+                                String getzz = l4.getText().toString();
                                 Intent intent = new Intent(MainScreen.this, abswk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
                                 startActivity(intent);
 
                             }

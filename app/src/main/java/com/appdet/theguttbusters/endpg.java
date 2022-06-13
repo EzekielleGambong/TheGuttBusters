@@ -89,7 +89,6 @@ public class endpg extends AppCompatActivity {
                                 Intent intent = new Intent(endpg.this, MainScreen.class);
 
                                 startActivity(intent);
-
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
