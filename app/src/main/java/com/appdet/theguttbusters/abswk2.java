@@ -25,10 +25,11 @@ public class abswk2 extends AppCompatActivity {
     LinearLayout fitone;
     ImageView imgTimer;
     //copy
-    TextView data;
+    TextView data, dataz;
     Double sum=0.0, add=1.5, addtxt;
+    Double finz=0.0, finztxt;
     //
-    private static final long START_TIME_IN_MILLIS = 37500;
+    private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -76,21 +77,27 @@ public class abswk2 extends AppCompatActivity {
         data = (TextView) findViewById(R.id.data);
         bgprogress.setVisibility(View.GONE);
         btnexercise.setVisibility(View.GONE);
-        data.setVisibility(View.GONE);
-
+        dataz = (TextView) findViewById(R.id.dataz);
 
 
         String haha1 = getIntent().getStringExtra("try1");
         data.setText(haha1);
+        String hahaz1 = getIntent().getStringExtra("tryz1");
+        dataz.setText(hahaz1);
+
+
 
         startTimer();
 
         data.getText().toString();
         if(data.getText().toString().length() > 0)
             addtxt = Double.parseDouble(data.getText().toString());
+        if(dataz.getText().toString().length() > 0)
+            finztxt = Double.parseDouble(dataz.getText().toString());
 
         sum = add + addtxt;
-        data.setText(Double.toString(sum));
+        finz = sum * finztxt;
+        data.setText(Double.toString(finz));
         btnexercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,9 +108,10 @@ public class abswk2 extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String get2 = data.getText().toString();
+                                String getz2 = dataz.getText().toString();
                                 Intent intent = new Intent(abswk2.this, abswk3.class);
-                                intent.putExtra("try1", get2);
-
+                                intent.putExtra("try2", get2);
+                                intent.putExtra("tryz2", getz2);
                                 startActivity(intent);
 
                             }

@@ -27,8 +27,10 @@ public class abswk3 extends AppCompatActivity {
     //copy
     TextView data;
     Double sum=0.0, add=2.2, addtxt;
+    Double finz=0.0, finztxt;
+    TextView dataz;
     //
-    private static final long START_TIME_IN_MILLIS = 37500;
+    private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -82,15 +84,21 @@ public class abswk3 extends AppCompatActivity {
 
         String haha2 = getIntent().getStringExtra("try2");
         data.setText(haha2);
+        dataz = (TextView) findViewById(R.id.dataz);
+        String hahaz2 = getIntent().getStringExtra("tryz2");
+        dataz.setText(hahaz2);
 
         startTimer();
 
         data.getText().toString();
         if(data.getText().toString().length() > 0)
             addtxt = Double.parseDouble(data.getText().toString());
+        if(dataz.getText().toString().length() > 0)
+            finztxt = Double.parseDouble(dataz.getText().toString());
 
         sum = add + addtxt;
-        data.setText(Double.toString(sum));
+        finz = sum * finztxt;
+        data.setText(Double.toString(finz));
         btnexercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,9 +109,10 @@ public class abswk3 extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String get3 = data.getText().toString();
+                                String getz3 = dataz.getText().toString();
                                 Intent intent = new Intent(abswk3.this, abswk4.class);
                                 intent.putExtra("try3", get3);
-
+                                intent.putExtra("tryz3", getz3);
                                 startActivity(intent);
 
                             }

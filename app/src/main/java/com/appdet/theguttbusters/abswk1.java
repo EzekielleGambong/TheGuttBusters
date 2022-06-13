@@ -26,7 +26,8 @@ public class abswk1 extends AppCompatActivity {
     ImageView imgTimer;
     //copy
     TextView data, dataz;
-    Double sum=0.0, add=3.5, addtxt, finz=0.0;
+    Double sum=0.0, add=3.5, addtxt;
+    Double finz=0.0, finztxt;
     //
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
@@ -78,7 +79,6 @@ public class abswk1 extends AppCompatActivity {
         dataz = (TextView) findViewById(R.id.dataz);
         bgprogress.setVisibility(View.GONE);
         btnexercise.setVisibility(View.GONE);
-        data.setVisibility(View.GONE);
 
 
 
@@ -92,9 +92,12 @@ public class abswk1 extends AppCompatActivity {
         data.getText().toString();
         if(data.getText().toString().length() > 0)
             addtxt = Double.parseDouble(data.getText().toString());
+        if(dataz.getText().toString().length() > 0)
+            finztxt = Double.parseDouble(dataz.getText().toString());
 
         sum = add + addtxt;
-        data.setText(Double.toString(sum));
+        finz = sum * finztxt;
+        data.setText(Double.toString(finz));
         btnexercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,9 +108,10 @@ public class abswk1 extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String get1 = data.getText().toString();
+                                String getz1 = dataz.getText().toString();
                                 Intent intent = new Intent(abswk1.this, abswk2.class);
                                 intent.putExtra("try1", get1);
-
+                                intent.putExtra("tryz1", getz1);
                                 startActivity(intent);
 
                             }

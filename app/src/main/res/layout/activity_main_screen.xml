@@ -696,8 +696,8 @@
                             android:src="@drawable/mainchest" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="200dp"
+                            android:layout_height="78dp"
                             android:layout_marginLeft="10dp"
                             android:orientation="vertical">
 
@@ -707,6 +707,85 @@
                                 android:text="Chest Workout"
                                 android:textSize="25sp"
                                 android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/easy"
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="E"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="M"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="45dp"
+
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="H"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -741,8 +820,8 @@
                             android:src="@drawable/mainhip" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="200dp"
+                            android:layout_height="78dp"
                             android:layout_marginLeft="10dp"
                             android:orientation="vertical">
 
@@ -752,6 +831,85 @@
                                 android:text="Hip Workout"
                                 android:textSize="25sp"
                                 android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/hipeasy"
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="E"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="M"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="45dp"
+
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="H"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -785,8 +943,8 @@
                             android:src="@drawable/mainlegs" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="200dp"
+                            android:layout_height="78dp"
                             android:layout_marginLeft="10dp"
                             android:orientation="vertical">
 
@@ -796,6 +954,84 @@
                                 android:text="Legs Workout"
                                 android:textSize="25sp"
                                 android:textStyle="bold" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/legseasy"
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="E"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="M"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="45dp"
+
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="H"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -829,8 +1065,8 @@
                             android:src="@drawable/mainshoulder" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="200dp"
+                            android:layout_height="78dp"
                             android:layout_marginLeft="10dp"
                             android:orientation="vertical">
 
@@ -840,6 +1076,86 @@
                                 android:text="Shoulder Layout"
                                 android:textSize="25sp"
                                 android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/shouldereasy"
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="E"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/shoudermid"
+                                        android:layout_width="45dp"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="M"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="45dp"
+                                        android:id="@+id/shouderhard"
+                                        android:layout_height="55dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/circular_grey_bordersolid"
+                                        android:backgroundTint="@color/btn"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="H"
+                                        android:textColor="@color/bg"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
                     </LinearLayout>
