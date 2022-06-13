@@ -24,13 +24,12 @@ public class abswk1 extends AppCompatActivity {
     View divpage, bgprogress;
     LinearLayout fitone;
     ImageView imgTimer;
-
+    //
     TextView data, dataz, datazz;
     Integer numz;
-
+    //
     Double sum=0.0, add=3.5, addtxt;
     Double finz=0.0, finztxt;
-    Double Initial;
 
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;

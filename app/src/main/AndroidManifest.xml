@@ -10,39 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheGuttBusters">
         <activity
-            android:name=".lgwk6"
-            android:exported="false" />
-        <activity
-            android:name=".lgwk5"
-            android:exported="false" />
-        <activity
-            android:name=".lgwk4"
-            android:exported="false" />
-        <activity
-            android:name=".lgwk3"
-            android:exported="false" />
-        <activity
-            android:name=".lgwk2"
-            android:exported="false" />
-        <activity
-            android:name=".lgwk1"
-            android:exported="false" />
-        <activity
-            android:name=".shwk5"
-            android:exported="false" />
-        <activity
-            android:name=".shwk4"
-            android:exported="false" />
-        <activity
-            android:name=".shwk3"
-            android:exported="false" />
-        <activity
-            android:name=".shwk2"
-            android:exported="false" />
-        <activity
-            android:name=".shwk1"
-            android:exported="false" />
-        <activity
             android:name=".endpg"
             android:exported="false" />
         <activity
