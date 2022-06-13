@@ -27,15 +27,11 @@
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk4.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk5.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk6.xml" value="0.38697916666666665" />
-        <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_lgwk1.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_login.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_main_opening.xml" value="0.3729166666666667" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_main_screen.xml" value="0.3729166666666667" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_register.xml" value="0.38697916666666665" />
-        <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk1.xml" value="0.38697916666666665" />
-        <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk3.xml" value="0.3729166666666667" />
-        <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk5.xml" value="0.3729166666666667" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_tuts1.xml" value="0.3729166666666667" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/custom_dialog.xml" value="0.38333333333333336" />
         <entry key="..\:/Users/Ezekielle/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/layout_dialog.xml" value="0.38697916666666665" />
@@ -47,16 +43,36 @@
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_abswk1.xml" value="0.264" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_abswk2.xml" value="0.2105978260869565" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_abswk3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_abswk4.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_abswk5.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_abswk6.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_chwk1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_chwk2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_chwk3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_chwk4.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_chwk5.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_chwk6.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_endpg.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk4.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk5.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_hpwk6.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_lgwk1.xml" value="0.253125" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_lgwk2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_lgwk3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_lgwk4.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_lgwk5.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_lgwk6.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_main_screen.xml" value="0.264" />
         <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk4.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Rymi/AndroidStudioProjects/TheGuttBusters/app/src/main/res/layout/activity_shwk5.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
