@@ -17,8 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainScreen extends AppCompatActivity {
 
     LinearLayout personalinfo, experience, review;
-    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn;
-    Double imaginarytxt;
+    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn, imagine;
+    Double imaginarytxt, imaginetxt;
 
 
 
@@ -50,7 +50,7 @@ public class MainScreen extends AppCompatActivity {
         l4 = findViewById(R.id.l4);
         cal = findViewById(R.id.cal);
         imaginary = findViewById(R.id.imaginary);
-        ezbtn = findViewById(R.id.easy);
+        ezbtn = findViewById(R.id.abseasy);
         hipezbtn = findViewById(R.id.hipeasy);
         legezbtn = findViewById(R.id.legseasy);
         shoulderezbtn = findViewById(R.id.shouldereasy);
@@ -120,6 +120,7 @@ public class MainScreen extends AppCompatActivity {
 
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
+                                String getzz = imagine.getText().toString();
                                 Intent intent = new Intent(MainScreen.this, abswk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
@@ -196,7 +197,7 @@ public class MainScreen extends AppCompatActivity {
 
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
-                                Intent intent = new Intent(MainScreen.this, abswk1.class);
+                                Intent intent = new Intent(MainScreen.this, shwk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
                                 startActivity(intent);

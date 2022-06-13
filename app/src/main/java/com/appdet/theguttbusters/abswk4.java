@@ -28,6 +28,7 @@ public class abswk4 extends AppCompatActivity {
     TextView data, dataz;
     Double sum=0.0, add=3.5, addtxt;
     Double finz=0.0, finztxt;
+    Double initial;
     //
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
@@ -39,7 +40,7 @@ public class abswk4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abswk1);
+        setContentView(R.layout.activity_abswk4);
 
 
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree);
@@ -82,10 +83,10 @@ public class abswk4 extends AppCompatActivity {
 
 
 
-        String haha = getIntent().getStringExtra("try");
-        String hahaz = getIntent().getStringExtra("tryz");
-        data.setText(haha);
-        dataz.setText(hahaz);
+        String haha3 = getIntent().getStringExtra("try3");
+        String hahaz3 = getIntent().getStringExtra("tryz3");
+        data.setText(haha3);
+        dataz.setText(hahaz3);
 
         startTimer();
 
@@ -95,9 +96,11 @@ public class abswk4 extends AppCompatActivity {
         if(dataz.getText().toString().length() > 0)
             finztxt = Double.parseDouble(dataz.getText().toString());
 
-        sum = add + addtxt;
-        finz = sum * finztxt;
-        data.setText(Double.toString(finz));
+        initial = add * finztxt;
+        sum = initial + addtxt;
+
+
+        data.setText(Double.toString(sum));
         btnexercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,11 +110,11 @@ public class abswk4 extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                String get1 = data.getText().toString();
-                                String getz1 = dataz.getText().toString();
+                                String get4 = data.getText().toString();
+                                String getz4 = dataz.getText().toString();
                                 Intent intent = new Intent(abswk4.this, abswk5.class);
-                                intent.putExtra("try1", get1);
-                                intent.putExtra("tryz1", getz1);
+                                intent.putExtra("try4", get4);
+                                intent.putExtra("tryz4", getz4);
                                 startActivity(intent);
 
                             }

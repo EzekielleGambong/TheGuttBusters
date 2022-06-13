@@ -523,6 +523,8 @@
                                 android:layout_marginLeft="20dp"
                                 android:text="0"
                                 android:textSize="15sp" />
+
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -597,7 +599,7 @@
                                     android:padding="5dp">
 
                                     <TextView
-                                        android:id="@+id/easy"
+                                        android:id="@+id/abseasy"
                                         android:layout_width="45dp"
                                         android:layout_height="55dp"
                                         android:background="@drawable/circular_grey_bordersolid"
@@ -623,6 +625,7 @@
 
                                     <TextView
                                         android:layout_width="45dp"
+                                        android:id="@+id/absmid"
                                         android:layout_height="55dp"
                                         android:background="@drawable/circular_grey_bordersolid"
                                         android:padding="10dp"
@@ -646,7 +649,7 @@
 
                                     <TextView
                                         android:layout_width="45dp"
-
+                                        android:id="@+id/abshard"
                                         android:layout_height="55dp"
                                         android:background="@drawable/circular_grey_bordersolid"
                                         android:padding="10dp"
@@ -721,7 +724,7 @@
                                     android:padding="5dp">
 
                                     <TextView
-                                        android:id="@+id/easy"
+                                        android:id="@+id/chesteasy"
                                         android:layout_width="45dp"
                                         android:layout_height="55dp"
                                         android:layout_weight="2"
@@ -746,6 +749,7 @@
                                     android:padding="5dp">
 
                                     <TextView
+                                        android:id="@+id/chestmid"
                                         android:layout_width="45dp"
                                         android:layout_height="55dp"
                                         android:layout_weight="2"
@@ -762,6 +766,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
@@ -770,7 +775,7 @@
 
                                     <TextView
                                         android:layout_width="45dp"
-
+                                        android:id="@+id/chesthard"
                                         android:layout_height="55dp"
                                         android:layout_weight="2"
                                         android:background="@drawable/circular_grey_bordersolid"
@@ -863,6 +868,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
@@ -870,6 +876,7 @@
                                     android:padding="5dp">
 
                                     <TextView
+                                        android:id="@+id/hipmid"
                                         android:layout_width="45dp"
                                         android:layout_height="55dp"
                                         android:layout_weight="2"
@@ -886,6 +893,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
@@ -894,7 +902,7 @@
 
                                     <TextView
                                         android:layout_width="45dp"
-
+                                        android:id="@+id/hiphard"
                                         android:layout_height="55dp"
                                         android:layout_weight="2"
                                         android:background="@drawable/circular_grey_bordersolid"
@@ -985,6 +993,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
@@ -992,6 +1001,7 @@
                                     android:padding="5dp">
 
                                     <TextView
+                                        android:id="@+id/legsmid"
                                         android:layout_width="45dp"
                                         android:layout_height="55dp"
                                         android:layout_weight="2"
@@ -1016,7 +1026,7 @@
 
                                     <TextView
                                         android:layout_width="45dp"
-
+                                        android:id="@+id/legshard"
                                         android:layout_height="55dp"
                                         android:layout_weight="2"
                                         android:background="@drawable/circular_grey_bordersolid"

@@ -15,7 +15,6 @@ import android.widget.ImageView;
 
 
 public class MainActivity extends AppCompatActivity {
-
     private static int SPLASH_SCREEN = 5000;
     Animation topAnim, bottomAnim;
     ImageView logo, text, footer;
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, Login.class);
+                Intent intent = new Intent(MainActivity.this, Tuts1.class);
                 startActivity(intent);
                 finish();
             }
