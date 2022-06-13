@@ -15,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -29,7 +32,7 @@ public class endpg extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
-
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +73,39 @@ public class endpg extends AppCompatActivity {
         String haha6 = getIntent().getStringExtra("try6");
         oof.setText(haha6);
 
+
+        reference = FirebaseDatabase.getInstance().getReference("users");
+        btmtxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(endpg.this);
+                alert_builder.setMessage("Do you want to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+
+                                Intent intent = new Intent(endpg.this, MainScreen.class);
+
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+
     }
 
     private void startTimer(){
@@ -84,6 +120,7 @@ public class endpg extends AppCompatActivity {
             public void onFinish() {
                 btmbox.setVisibility(View.VISIBLE);
                 btmtxt.setVisibility(View.VISIBLE);
+
             }
         }.start();
         mTimerRunning = true;

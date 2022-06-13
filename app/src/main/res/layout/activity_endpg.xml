@@ -118,13 +118,14 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divpage" />
+
     <TextView
         android:id="@+id/btmtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
         android:gravity="center"
         android:text="Done"
         android:textAlignment="center"
@@ -132,9 +133,9 @@
         android:textSize="16sp"
         app:fontFamily="@font/audiowide"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/oof"
