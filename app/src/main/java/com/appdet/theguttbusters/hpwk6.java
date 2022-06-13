@@ -18,17 +18,17 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class hpwk6 extends AppCompatActivity {
-
-
     TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise;
     View divpage, bgprogress;
     LinearLayout fitone;
     ImageView imgTimer;
-    //copy
-    TextView data, dataz;
+    //
+    TextView data, dataz, datazz;
+    Integer numz;
+    //
     Double sum=0.0, add=3.5, addtxt;
     Double finz=0.0, finztxt;
-    //
+
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
@@ -74,18 +74,23 @@ public class hpwk6 extends AppCompatActivity {
         imgTimer.startAnimation(alphago);
 
 
-        //copy
+
         data = (TextView) findViewById(R.id.data);
         dataz = (TextView) findViewById(R.id.dataz);
-        bgprogress.setVisibility(View.GONE);
-        btnexercise.setVisibility(View.GONE);
+
+
 
 
 
         String haha = getIntent().getStringExtra("try");
         String hahaz = getIntent().getStringExtra("tryz");
+
         data.setText(haha);
         dataz.setText(hahaz);
+
+
+
+
 
         startTimer();
 
@@ -142,8 +147,7 @@ public class hpwk6 extends AppCompatActivity {
             @Override
             public void onFinish() {
                 //copy
-                bgprogress.setVisibility(View.VISIBLE);
-                btnexercise.setVisibility(View.VISIBLE);
+
 
 
                 //
