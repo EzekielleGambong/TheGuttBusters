@@ -25,12 +25,11 @@ public class abswk4 extends AppCompatActivity {
     LinearLayout fitone;
     ImageView imgTimer;
     //copy
-    TextView data;
+    TextView data, dataz;
     Double sum=0.0, add=3.5, addtxt;
     Double finz=0.0, finztxt;
-    TextView dataz;
     //
-    private static final long START_TIME_IN_MILLIS = 90000;
+    private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -40,9 +39,9 @@ public class abswk4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abswk4);
+        setContentView(R.layout.activity_abswk1);
 
-        //Load Animations uwu
+
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree);
         bttfour = AnimationUtils.loadAnimation(this, R.anim.bttfour);
         ttbone = AnimationUtils.loadAnimation(this, R.anim.ttbone);
@@ -55,14 +54,16 @@ public class abswk4 extends AppCompatActivity {
         timerValue = (TextView) findViewById(R.id.timerValue);
         btnexercise = (TextView) findViewById(R.id.btnexercise);
 
+
         divpage = (View) findViewById(R.id.divpage);
         bgprogress = (View) findViewById(R.id.bgprogress);
 
         fitone = (LinearLayout) findViewById(R.id.fitone);
 
+
         imgTimer = (ImageView) findViewById(R.id.imgtimer);
 
-        //assign animation
+
         btnexercise.startAnimation(bttfour);
         bgprogress.startAnimation(btthree);
         fitone.startAnimation(ttbone);
@@ -72,19 +73,20 @@ public class abswk4 extends AppCompatActivity {
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
 
+
         //copy
         data = (TextView) findViewById(R.id.data);
+        dataz = (TextView) findViewById(R.id.dataz);
         bgprogress.setVisibility(View.GONE);
         btnexercise.setVisibility(View.GONE);
-        data.setVisibility(View.GONE);
 
 
 
-        String haha3 = getIntent().getStringExtra("try3");
-        data.setText(haha3);
-        dataz = (TextView) findViewById(R.id.dataz);
-        String hahaz3 = getIntent().getStringExtra("tryz3");
-        dataz.setText(hahaz3);
+        String haha = getIntent().getStringExtra("try");
+        String hahaz = getIntent().getStringExtra("tryz");
+        data.setText(haha);
+        dataz.setText(hahaz);
+
         startTimer();
 
         data.getText().toString();
@@ -105,11 +107,11 @@ public class abswk4 extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                String get4 = data.getText().toString();
-                                String getz4 = dataz.getText().toString();
+                                String get1 = data.getText().toString();
+                                String getz1 = dataz.getText().toString();
                                 Intent intent = new Intent(abswk4.this, abswk5.class);
-                                intent.putExtra("try4", get4);
-                                intent.putExtra("tryz4", getz4);
+                                intent.putExtra("try1", get1);
+                                intent.putExtra("tryz1", getz1);
                                 startActivity(intent);
 
                             }
@@ -145,6 +147,7 @@ public class abswk4 extends AppCompatActivity {
 
 
                 //
+
             }
         }.start();
         mTimerRunning = true;

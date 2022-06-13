@@ -25,10 +25,9 @@ public class abswk3 extends AppCompatActivity {
     LinearLayout fitone;
     ImageView imgTimer;
     //copy
-    TextView data;
-    Double sum=0.0, add=2.2, addtxt;
+    TextView data, dataz;
+    Double sum=0.0, add=3.5, addtxt;
     Double finz=0.0, finztxt;
-    TextView dataz;
     //
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
@@ -55,14 +54,16 @@ public class abswk3 extends AppCompatActivity {
         timerValue = (TextView) findViewById(R.id.timerValue);
         btnexercise = (TextView) findViewById(R.id.btnexercise);
 
+
         divpage = (View) findViewById(R.id.divpage);
         bgprogress = (View) findViewById(R.id.bgprogress);
 
         fitone = (LinearLayout) findViewById(R.id.fitone);
 
+
         imgTimer = (ImageView) findViewById(R.id.imgtimer);
 
-        //assign animation
+
         btnexercise.startAnimation(bttfour);
         bgprogress.startAnimation(btthree);
         fitone.startAnimation(ttbone);
@@ -73,20 +74,18 @@ public class abswk3 extends AppCompatActivity {
         imgTimer.startAnimation(alphago);
 
 
-
         //copy
         data = (TextView) findViewById(R.id.data);
+        dataz = (TextView) findViewById(R.id.dataz);
         bgprogress.setVisibility(View.GONE);
         btnexercise.setVisibility(View.GONE);
-        data.setVisibility(View.GONE);
 
 
 
-        String haha2 = getIntent().getStringExtra("try2");
-        data.setText(haha2);
-        dataz = (TextView) findViewById(R.id.dataz);
-        String hahaz2 = getIntent().getStringExtra("tryz2");
-        dataz.setText(hahaz2);
+        String haha = getIntent().getStringExtra("try");
+        String hahaz = getIntent().getStringExtra("tryz");
+        data.setText(haha);
+        dataz.setText(hahaz);
 
         startTimer();
 
@@ -108,11 +107,11 @@ public class abswk3 extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                String get3 = data.getText().toString();
-                                String getz3 = dataz.getText().toString();
+                                String get1 = data.getText().toString();
+                                String getz1 = dataz.getText().toString();
                                 Intent intent = new Intent(abswk3.this, abswk4.class);
-                                intent.putExtra("try3", get3);
-                                intent.putExtra("tryz3", getz3);
+                                intent.putExtra("try1", get1);
+                                intent.putExtra("tryz1", getz1);
                                 startActivity(intent);
 
                             }
@@ -148,6 +147,7 @@ public class abswk3 extends AppCompatActivity {
 
 
                 //
+
             }
         }.start();
         mTimerRunning = true;

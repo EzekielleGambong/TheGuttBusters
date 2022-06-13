@@ -39,6 +39,33 @@
                 android:textColor="#000000"
                 android:textSize="27sp"
                 app:fontFamily="@font/audiowide" />
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="8dp"
+                android:text="W"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:fontFamily="@font/audiowide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fitone" />
+
+            <TextView
+                android:id="@+id/dataz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="8dp"
+                android:text="W"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:fontFamily="@font/audiowide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fitone" />
 
         </LinearLayout>
 

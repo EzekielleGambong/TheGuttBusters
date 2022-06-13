@@ -1,7 +1,9 @@
 package com.appdet.theguttbusters;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -15,12 +17,15 @@ import android.widget.TextView;
 import java.util.Locale;
 
 public class lgwk3 extends AppCompatActivity {
-    TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise, data;
+    TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise;
     View divpage, bgprogress;
     LinearLayout fitone;
     ImageView imgTimer;
-    Double sum=0.0, add=0.0;
-
+    //copy
+    TextView data, dataz;
+    Double sum=0.0, add=3.5, addtxt;
+    Double finz=0.0, finztxt;
+    //
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
@@ -31,7 +36,9 @@ public class lgwk3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hpwk1);
+        setContentView(R.layout.activity_abswk1);
+
+
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree);
         bttfour = AnimationUtils.loadAnimation(this, R.anim.bttfour);
         ttbone = AnimationUtils.loadAnimation(this, R.anim.ttbone);
@@ -63,18 +70,64 @@ public class lgwk3 extends AppCompatActivity {
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
 
+
         //copy
         data = (TextView) findViewById(R.id.data);
+        dataz = (TextView) findViewById(R.id.dataz);
         bgprogress.setVisibility(View.GONE);
         btnexercise.setVisibility(View.GONE);
-        data.setVisibility(View.GONE);
 
 
-        //copy
+
         String haha = getIntent().getStringExtra("try");
+        String hahaz = getIntent().getStringExtra("tryz");
         data.setText(haha);
+        dataz.setText(hahaz);
+
         startTimer();
+
+        data.getText().toString();
+        if(data.getText().toString().length() > 0)
+            addtxt = Double.parseDouble(data.getText().toString());
+        if(dataz.getText().toString().length() > 0)
+            finztxt = Double.parseDouble(dataz.getText().toString());
+
+        sum = add + addtxt;
+        finz = sum * finztxt;
+        data.setText(Double.toString(finz));
+        btnexercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(lgwk3.this);
+                alert_builder.setMessage("Do you want to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String get1 = data.getText().toString();
+                                String getz1 = dataz.getText().toString();
+                                Intent intent = new Intent(lgwk3.this, lgwk4.class);
+                                intent.putExtra("try1", get1);
+                                intent.putExtra("tryz1", getz1);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+        ///////
     }
+
     private void startTimer(){
         countDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
@@ -88,19 +141,9 @@ public class lgwk3 extends AppCompatActivity {
                 //copy
                 bgprogress.setVisibility(View.VISIBLE);
                 btnexercise.setVisibility(View.VISIBLE);
-                data.getText().toString();
-                if(data.getText().toString().length() > 0)
-                    add = Double.parseDouble(data.getText().toString());
-                sum = sum+add;
-                data.setText(Double.toString(sum));
 
 
-                String get1 = data.getText().toString();
-                Intent intent = new Intent(lgwk3.this, lgwk4.class);
-                intent.putExtra("try1", get1);
-
-                startActivity(intent);
-
+                //
 
             }
         }.start();
