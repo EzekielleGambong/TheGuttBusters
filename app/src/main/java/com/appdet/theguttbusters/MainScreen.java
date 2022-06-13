@@ -17,7 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainScreen extends AppCompatActivity {
 
     LinearLayout personalinfo, experience, review;
-    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal;
+    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn;
+    Double imaginarytxt;
 
 
 
@@ -38,7 +39,6 @@ public class MainScreen extends AppCompatActivity {
         personalinfobtn = findViewById(R.id.personalinfobtn);
         experiencebtn = findViewById(R.id.experiencebtn);
         reviewbtn = findViewById(R.id.reviewbtn);
-        /*making personal info visible*/
         personalinfo.setVisibility(View.VISIBLE);
         experience.setVisibility(View.GONE);
         review.setVisibility(View.GONE);
@@ -49,8 +49,11 @@ public class MainScreen extends AppCompatActivity {
         l3 = findViewById(R.id.l3);
         l4 = findViewById(R.id.l4);
         cal = findViewById(R.id.cal);
+        imaginary = findViewById(R.id.imaginary);
         ezbtn = findViewById(R.id.easy);
-
+        hipezbtn = findViewById(R.id.hipeasy);
+        legezbtn = findViewById(R.id.legseasy);
+        shoulderezbtn = findViewById(R.id.shouldereasy);
         showAllUserData();
 
 
@@ -108,10 +111,132 @@ public class MainScreen extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 1.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
                                 String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
                                 Intent intent = new Intent(MainScreen.this, abswk1.class);
                                 intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                startActivity(intent);
 
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+        legezbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 1.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                Intent intent = new Intent(MainScreen.this, abswk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+        shoulderezbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 1.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                Intent intent = new Intent(MainScreen.this, abswk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+        hipezbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 1.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                Intent intent = new Intent(MainScreen.this, abswk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
                                 startActivity(intent);
 
                             }

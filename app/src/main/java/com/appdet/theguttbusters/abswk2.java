@@ -1,8 +1,11 @@
 package com.appdet.theguttbusters;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -21,8 +24,12 @@ public class abswk2 extends AppCompatActivity {
     View divpage, bgprogress;
     LinearLayout fitone;
     ImageView imgTimer;
-
-    private static final long START_TIME_IN_MILLIS = 37500;
+    //copy
+    TextView data, dataz;
+    Double sum=0.0, add=1.5, addtxt;
+    Double finz=0.0, finztxt;
+    //
+    private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -66,9 +73,62 @@ public class abswk2 extends AppCompatActivity {
 
 
 
+        //copy
+        data = (TextView) findViewById(R.id.data);
+        bgprogress.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        dataz = (TextView) findViewById(R.id.dataz);
+
+
         String haha1 = getIntent().getStringExtra("try1");
-        fitonetitle.setText(haha1);
+        data.setText(haha1);
+        String hahaz1 = getIntent().getStringExtra("tryz1");
+        dataz.setText(hahaz1);
+
+
+
         startTimer();
+
+        data.getText().toString();
+        if(data.getText().toString().length() > 0)
+            addtxt = Double.parseDouble(data.getText().toString());
+        if(dataz.getText().toString().length() > 0)
+            finztxt = Double.parseDouble(dataz.getText().toString());
+
+        sum = add + addtxt;
+        finz = sum * finztxt;
+        data.setText(Double.toString(finz));
+        btnexercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(abswk2.this);
+                alert_builder.setMessage("Do you want to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String get2 = data.getText().toString();
+                                String getz2 = dataz.getText().toString();
+                                Intent intent = new Intent(abswk2.this, abswk3.class);
+                                intent.putExtra("try2", get2);
+                                intent.putExtra("tryz2", getz2);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+        ///////
     }
 
     private void startTimer(){
@@ -81,7 +141,12 @@ public class abswk2 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Toast.makeText(getApplicationContext(),"Done!", Toast.LENGTH_SHORT).show();
+                //copy
+                bgprogress.setVisibility(View.VISIBLE);
+                btnexercise.setVisibility(View.VISIBLE);
+
+
+                //
             }
         }.start();
         mTimerRunning = true;
