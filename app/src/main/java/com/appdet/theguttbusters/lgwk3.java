@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class hpwk5 extends AppCompatActivity {
+public class lgwk3 extends AppCompatActivity {
     TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise, data;
     View divpage, bgprogress;
     LinearLayout fitone;
@@ -96,7 +96,7 @@ public class hpwk5 extends AppCompatActivity {
 
 
                 String get1 = data.getText().toString();
-                Intent intent = new Intent(hpwk5.this, hpwk6.class);
+                Intent intent = new Intent(lgwk3.this, lgwk4.class);
                 intent.putExtra("try1", get1);
 
                 startActivity(intent);

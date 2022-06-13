@@ -11,10 +11,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
-public class hpwk5 extends AppCompatActivity {
+public class lgwk6 extends AppCompatActivity {
     TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise, data;
     View divpage, bgprogress;
     LinearLayout fitone;
@@ -85,23 +86,7 @@ public class hpwk5 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                //copy
-                bgprogress.setVisibility(View.VISIBLE);
-                btnexercise.setVisibility(View.VISIBLE);
-                data.getText().toString();
-                if(data.getText().toString().length() > 0)
-                    add = Double.parseDouble(data.getText().toString());
-                sum = sum+add;
-                data.setText(Double.toString(sum));
-
-
-                String get1 = data.getText().toString();
-                Intent intent = new Intent(hpwk5.this, hpwk6.class);
-                intent.putExtra("try1", get1);
-
-                startActivity(intent);
-
-
+                Toast.makeText(getApplicationContext(),"Done!", Toast.LENGTH_SHORT).show();
             }
         }.start();
         mTimerRunning = true;
