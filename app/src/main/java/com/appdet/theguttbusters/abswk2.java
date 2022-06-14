@@ -26,6 +26,7 @@ public class abswk2 extends AppCompatActivity {
     ImageView imgTimer;
     //copy
     TextView data, dataz;
+    TextView datazz;
     Double sum=0.0, add=3.5, addtxt;
     Double finz=0.0, finztxt;
     Double initial;
@@ -78,8 +79,6 @@ public class abswk2 extends AppCompatActivity {
         //copy
         data = (TextView) findViewById(R.id.data);
         dataz = (TextView) findViewById(R.id.dataz);
-        bgprogress.setVisibility(View.GONE);
-        btnexercise.setVisibility(View.GONE);
 
 
 
@@ -88,6 +87,11 @@ public class abswk2 extends AppCompatActivity {
         data.setText(haha1);
         dataz.setText(hahaz1);
 
+        //
+        datazz = (TextView) findViewById(R.id.datazz);
+        String hahazz1 = getIntent().getStringExtra("tryzz1");
+        datazz.setText(hahazz1);
+        //
         startTimer();
 
         data.getText().toString();
@@ -113,9 +117,13 @@ public class abswk2 extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 String get2 = data.getText().toString();
                                 String getz2 = dataz.getText().toString();
+                                String getzz2 = datazz.getText().toString();
                                 Intent intent = new Intent(abswk2.this, abswk3.class);
                                 intent.putExtra("try2", get2);
                                 intent.putExtra("tryz2", getz2);
+
+                                intent.putExtra("tryzz2", getzz2);
+                                //
                                 startActivity(intent);
 
                             }

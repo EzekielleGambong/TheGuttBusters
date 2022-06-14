@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F4FB"
-    tools:context=".endpg">
-
-
+    tools:context=".congz">
     <ImageView
         android:id="@+id/iv_congrats"
         android:layout_width="45dp"
@@ -18,7 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/congrats" />
+        app:srcCompat="@drawable/congrats"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_dots"
@@ -28,7 +26,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dots" />
+        app:srcCompat="@drawable/dots"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_blues"
@@ -38,6 +37,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/blue_stuff"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="-35dp" />
 
     <ImageView
@@ -50,7 +50,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/orange_line" />
+        app:srcCompat="@drawable/orange_line"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_purple"
@@ -62,7 +63,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/purple_stuff" />
+        app:srcCompat="@drawable/purple_stuff"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_girl"
@@ -73,7 +75,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/iv_dots"
-        app:srcCompat="@drawable/girl" />
+        app:srcCompat="@drawable/girl"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_goal"
@@ -85,7 +88,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.652"
-        app:srcCompat="@drawable/goal" />
+        app:srcCompat="@drawable/goal"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/btmbox"
@@ -130,23 +134,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/oof"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="62dp" />
 
-    <TextView
-        android:id="@+id/oofz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv_blues"
-        app:layout_constraintVertical_bias="0.194" />
 </androidx.constraintlayout.widget.ConstraintLayout>

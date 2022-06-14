@@ -27,7 +27,7 @@ public class endpg extends AppCompatActivity {
     Animation l2r, r2l, top, bot;
     ImageView congrats, goal, blue, orange, purple, girl, dots;
     View btmbox;
-    TextView btmtxt, timerValue, oof;
+    TextView btmtxt, timerValue, oof, oofz;
     private static final long START_TIME_IN_MILLIS = 5000;
     private CountDownTimer countDownTimer;
     private boolean mTimerRunning;
@@ -39,7 +39,7 @@ public class endpg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);;
         setContentView(R.layout.activity_endpg);
-
+        reference = FirebaseDatabase.getInstance().getReference("users");
         //Animations
         l2r = AnimationUtils.loadAnimation(this, R.anim.left2right_animation);
         r2l = AnimationUtils.loadAnimation(this, R.anim.right2left_animation);
@@ -51,11 +51,13 @@ public class endpg extends AppCompatActivity {
         blue = findViewById(R.id.iv_blues);
         orange = findViewById(R.id.iv_orange);
         purple = findViewById(R.id.iv_purple);
+        oofz = (TextView) findViewById(R.id.datazz);
         girl = findViewById(R.id.iv_girl);
         dots = findViewById(R.id.iv_dots);
         btmbox = findViewById(R.id.btmbox);
         btmtxt = findViewById(R.id.btmtxt);
         oof = findViewById(R.id.oof);
+        oofz = findViewById(R.id.oofz);
         timerValue = (TextView) findViewById(R.id.timerValue);
         //Set animation to elements
         congrats.setAnimation(top);
@@ -72,9 +74,13 @@ public class endpg extends AppCompatActivity {
         startTimer();
         String haha6 = getIntent().getStringExtra("try6");
         oof.setText(haha6);
+        //
 
 
-        reference = FirebaseDatabase.getInstance().getReference("users");
+        String hahaz6 = getIntent().getStringExtra("tryzz6");
+        oofz.setText(hahaz6);
+        //
+
         btmtxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,11 +90,26 @@ public class endpg extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                if(isPasswordChanged()){
 
 
-                                Intent intent = new Intent(endpg.this, MainScreen.class);
 
-                                startActivity(intent);
+
+                                    String getzz6 = oofz.getText().toString();
+                                    Intent intent = new Intent(endpg.this, MainScreen.class);
+                                    intent.putExtra("phoneNo", getzz6);
+
+
+                                    startActivity(intent);
+                                }
+                                else{
+                                    Toast.makeText(endpg.this, "Data is sae and can not", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(endpg.this, MainScreen.class);
+
+                                    startActivity(intent);
+                                }
+
+
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -103,6 +124,8 @@ public class endpg extends AppCompatActivity {
                 alertDialog.show();
             }
         });
+
+
 
 
     }
@@ -132,6 +155,35 @@ public class endpg extends AppCompatActivity {
         String timeLeft = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds) ;
         timerValue.setText(timeLeft);
     }
+
+
+
+
+    private boolean isPasswordChanged() {
+        String haha6 = getIntent().getStringExtra("try6");
+        oof.setText(haha6);
+        String hahazz6 = getIntent().getStringExtra("tryzz6");
+        oofz.setText(hahazz6);
+
+
+
+
+
+
+
+        if(!hahazz6.equals(oof.getText().toString())){
+            reference.child(hahazz6).child("cal").setValue(oof.getText().toString());
+
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+
+
 
 
 }

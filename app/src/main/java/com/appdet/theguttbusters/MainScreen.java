@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainScreen extends AppCompatActivity {
 
     LinearLayout personalinfo, experience, review;
-    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn, imagine;
+    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn, imagine, ini;
     Double imaginarytxt, imaginetxt;
 
 
@@ -50,6 +50,7 @@ public class MainScreen extends AppCompatActivity {
         l4 = findViewById(R.id.l4);
         cal = findViewById(R.id.cal);
         imaginary = findViewById(R.id.imaginary);
+        ini = findViewById(R.id.ini);
         ezbtn = findViewById(R.id.abseasy);
         hipezbtn = findViewById(R.id.hipeasy);
         legezbtn = findViewById(R.id.legseasy);
@@ -120,10 +121,11 @@ public class MainScreen extends AppCompatActivity {
 
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
-                                String getzz = imagine.getText().toString();
+                                String getzz = l4.getText().toString();
                                 Intent intent = new Intent(MainScreen.this, abswk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
                                 startActivity(intent);
 
                             }

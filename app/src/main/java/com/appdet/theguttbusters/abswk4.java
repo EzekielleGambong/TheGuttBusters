@@ -29,6 +29,7 @@ public class abswk4 extends AppCompatActivity {
     Double sum=0.0, add=3.5, addtxt;
     Double finz=0.0, finztxt;
     Double initial;
+    TextView datazz;
     //
     private static final long START_TIME_IN_MILLIS = 34000;
     private CountDownTimer countDownTimer;
@@ -78,8 +79,7 @@ public class abswk4 extends AppCompatActivity {
         //copy
         data = (TextView) findViewById(R.id.data);
         dataz = (TextView) findViewById(R.id.dataz);
-        bgprogress.setVisibility(View.GONE);
-        btnexercise.setVisibility(View.GONE);
+
 
 
 
@@ -87,6 +87,12 @@ public class abswk4 extends AppCompatActivity {
         String hahaz3 = getIntent().getStringExtra("tryz3");
         data.setText(haha3);
         dataz.setText(hahaz3);
+        //
+
+        datazz = (TextView) findViewById(R.id.datazz);
+        String hahazz3 = getIntent().getStringExtra("tryzz3");
+        datazz.setText(hahazz3);
+        //
 
         startTimer();
 
@@ -112,9 +118,14 @@ public class abswk4 extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 String get4 = data.getText().toString();
                                 String getz4 = dataz.getText().toString();
+                                String getzz4 = datazz.getText().toString();
                                 Intent intent = new Intent(abswk4.this, abswk5.class);
                                 intent.putExtra("try4", get4);
                                 intent.putExtra("tryz4", getz4);
+
+
+                                intent.putExtra("tryzz4", getzz4);
+                                //
                                 startActivity(intent);
 
                             }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheGuttBusters">
         <activity
+            android:name=".lol"
+            android:exported="false" />
+        <activity
             android:name=".endpg"
             android:exported="false" />
         <activity

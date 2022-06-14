@@ -79,6 +79,7 @@ public class abswk1 extends AppCompatActivity {
 
         data = (TextView) findViewById(R.id.data);
         dataz = (TextView) findViewById(R.id.dataz);
+        datazz = (TextView) findViewById(R.id.datazz);
 
 
 
@@ -86,9 +87,15 @@ public class abswk1 extends AppCompatActivity {
 
         String haha = getIntent().getStringExtra("try");
         String hahaz = getIntent().getStringExtra("tryz");
-
         data.setText(haha);
         dataz.setText(hahaz);
+
+        //
+
+        datazz = (TextView) findViewById(R.id.datazz);
+        String hahazz = getIntent().getStringExtra("tryzz");
+        datazz.setText(hahazz);
+        //
 
 
 
@@ -116,9 +123,15 @@ public class abswk1 extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 String get1 = data.getText().toString();
                                 String getz1 = dataz.getText().toString();
+
+                                String getzz1 = datazz.getText().toString();
                                 Intent intent = new Intent(abswk1.this, abswk2.class);
                                 intent.putExtra("try1", get1);
                                 intent.putExtra("tryz1", getz1);
+
+
+                                intent.putExtra("tryzz1", getzz1);
+                                //
                                 startActivity(intent);
 
 
@@ -151,11 +164,7 @@ public class abswk1 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                //copy
 
-
-
-                //
 
             }
         }.start();

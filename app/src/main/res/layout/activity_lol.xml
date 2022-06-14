@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4FB"
-    tools:context=".endpg">
+    tools:context=".lol">
 
 
     <ImageView
@@ -18,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/congrats" />
+        app:srcCompat="@drawable/congrats"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_dots"
@@ -28,7 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dots" />
+        app:srcCompat="@drawable/dots"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_blues"
@@ -38,6 +40,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/blue_stuff"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="-35dp" />
 
     <ImageView
@@ -50,7 +53,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/orange_line" />
+        app:srcCompat="@drawable/orange_line"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_purple"
@@ -62,7 +66,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/purple_stuff" />
+        app:srcCompat="@drawable/purple_stuff"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_girl"
@@ -73,7 +78,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/iv_dots"
-        app:srcCompat="@drawable/girl" />
+        app:srcCompat="@drawable/girl"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/iv_goal"
@@ -85,11 +91,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.652"
-        app:srcCompat="@drawable/goal" />
-
+        app:srcCompat="@drawable/goal"
+        tools:ignore="MissingConstraints" />
     <View
-        android:id="@+id/btmbox"
-        android:background="#39AFEA"
+        android:id="@+id/donebg"
+        android:background="@color/btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="0dp"
@@ -97,6 +103,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
+
+    <TextView
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="CONTINUE WORKOUT"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:fontFamily="@font/audiowide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
     <TextView
         android:id="@+id/timerValue"
         android:layout_width="wrap_content"
@@ -111,24 +136,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divpage" />
-
-    <TextView
-        android:id="@+id/btmtxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
-        android:gravity="center"
-        android:text="Done"
-        android:textAlignment="center"
-        android:textColor="#F4F4FB"
-        android:textSize="16sp"
-        app:fontFamily="@font/audiowide"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/oof"
