@@ -7,87 +7,93 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="550dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bgic" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="10dp"
-        android:paddingTop="10dp"
+        android:paddingTop="140dp"
         android:paddingRight="10dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_centerHorizontal="true"
-
-                android:text="LOGIN"
-                android:textColor="@color/black"
-                android:textSize="40dp"
-                android:textStyle="bold"
-                />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/circularbordersolid"
+            android:backgroundTint="#BDE1F3"
             android:gravity="center"
             android:orientation="vertical"
+
             >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="368dp"
-                android:layout_height="100dp"
-                app:cardCornerRadius="6dp"
-                app:cardElevation="0dp">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/wone"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="368dp"
-                    android:layout_height="90dp"
-                    android:hint="Phone Number"
-                    app:boxStrokeColor="#39AFEA"
-                    app:counterEnabled="true"
-                    app:endIconMode="clear_text"
-                    app:helperText="Required*"
-                    app:helperTextTextColor="@color/red"
+                    android:layout_centerHorizontal="true"
 
-                    app:hintTextColor="#39AFEA"
-                    app:startIconDrawable="@drawable/uiphone">
+                    android:text="LOGIN"
+                    android:textColor="@color/black"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/qone"
-                        android:maxLength="11"
-                        android:digits="1234567890"
-                        android:layout_width="368dp"
-                        android:layout_height="60dp"
-                        tools:layout_editor_absoluteX="0dp" />
-                </com.google.android.material.textfield.TextInputLayout>
 
-            </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="368dp"
-                android:layout_height="100dp"
-                app:cardCornerRadius="6dp"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/wone"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="290dp"
+                        android:layout_height="90dp"
+                        android:hint="Phone Number"
+                        app:boxStrokeColor="#39AFEA"
+                        app:counterEnabled="true"
+                        app:endIconMode="clear_text"
+                        app:helperText="Required*"
 
-                app:cardElevation="0dp">
+                        app:helperTextTextColor="@color/red"
+                        app:counterMaxLength="11"
+
+                        app:hintTextColor="#39AFEA"
+                        app:startIconDrawable="@drawable/uiphone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/qone"
+                            android:maxLength="11"
+                            android:textSize="12sp"
+                            android:digits="1234567890"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:layout_editor_absoluteX="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/wtwo"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="290dp"
+                    android:layout_height="90dp"
                     android:hint="Password"
 
                     app:boxStrokeColor="#39AFEA"
@@ -97,6 +103,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/qtwo"
+                        android:textSize="12sp"
                         android:inputType="textPassword"
                         android:digits="abcdefghigklmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
                         android:layout_width="match_parent"
@@ -106,79 +113,67 @@
                         android:id="@+id/cbShowpass"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="12sp"
                         android:layout_weight="1"
                         android:minHeight="48dp"
                         android:text="Show Password"
                         tools:ignore="TouchTargetSizeCheck"
                         tools:layout_editor_absoluteX="0dp" />
                 </com.google.android.material.textfield.TextInputLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Sanskar Tiwari"
-                    android:textColor="#424242"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Android Developer"
-                    android:textSize="14sp" />
-
-
             </LinearLayout>
 
 
 
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="1dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/loginbtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#39AFEA"
+                    android:text="log in"
+                    android:textColor="#F4F4FB"
+                    android:onClick="btnClick"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="0dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/ForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp"
+                    android:text="Forgot Password"
+                    android:textColor="#39AFEA"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="393dp"
-            android:layout_height="90dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="1dp"
-            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/loginbtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#39AFEA"
-                android:text="log in"
-                android:textColor="#F4F4FB"
-                android:onClick="btnClick"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:cornerRadius="0dp"
-
-                />
-
-            <TextView
-                android:id="@+id/ForgotPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="235dp"
-                android:text="Forgot Password"
-                android:textColor="#39AFEA"
-                android:textSize="17dp"
-                android:textStyle="bold" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="110dp"
             android:paddingBottom="10dp">
 
             <LinearLayout
@@ -225,6 +220,5 @@
 
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

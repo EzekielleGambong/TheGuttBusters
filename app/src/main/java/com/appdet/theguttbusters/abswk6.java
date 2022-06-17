@@ -28,6 +28,7 @@ public class abswk6 extends AppCompatActivity {
     TextView data, dataz;
     TextView datazz;
     Double sum=0.0, add=3.5, addtxt;
+    TextView l1,l2, l3;
     Double finz=0.0, finztxt;
     Double initial;
     //
@@ -74,6 +75,14 @@ public class abswk6 extends AppCompatActivity {
         divpage.startAnimation(ttbtwo);
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
+        l1.setVisibility(View.GONE);
+        l3.setVisibility(View.GONE);
+        l2.setVisibility(View.GONE);
+        data.setVisibility(View.GONE);
+        dataz.setVisibility(View.GONE);
+        datazz.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        bgprogress.setVisibility(View.GONE);
 
 
         //copy
@@ -92,7 +101,19 @@ public class abswk6 extends AppCompatActivity {
         datazz = (TextView) findViewById(R.id.datazz);
         String hahazz5 = getIntent().getStringExtra("tryzz5");
         datazz.setText(hahazz5);
-        //
+
+        l1 = (TextView) findViewById(R.id.l1);
+        String lab = getIntent().getStringExtra("le11");
+        l1.setText(lab);
+
+        l2 = (TextView) findViewById(R.id.l2);
+        String labe= getIntent().getStringExtra("le21");
+        l2.setText(labe);
+
+        l3 = (TextView) findViewById(R.id.l3);
+        String label = getIntent().getStringExtra("le31");
+        l3.setText(label);
+
 
         startTimer();
 
@@ -119,11 +140,18 @@ public class abswk6 extends AppCompatActivity {
 
                                 String get6 = data.getText().toString();
                                 String getzz6 = datazz.getText().toString();
+
+                                String getl1 = l1.getText().toString();
+                                String getlb1 = l2.getText().toString();
+                                String getlbl1 = l3.getText().toString();
+
                                 Intent intent = new Intent(abswk6.this, endpg.class);
                                 intent.putExtra("try6", get6);
-
-
                                 intent.putExtra("tryzz6", getzz6);
+
+                                intent.putExtra("le11", getl1);
+                                intent.putExtra("le21", getlb1);
+                                intent.putExtra("le31", getlbl1);
                                 //
                                 startActivity(intent);
 

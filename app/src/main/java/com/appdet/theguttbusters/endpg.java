@@ -27,6 +27,7 @@ public class endpg extends AppCompatActivity {
     Animation l2r, r2l, top, bot;
     ImageView congrats, goal, blue, orange, purple, girl, dots;
     View btmbox;
+    TextView l1,l2, l3;
     TextView btmtxt, timerValue, oof, oofz;
     private static final long START_TIME_IN_MILLIS = 5000;
     private CountDownTimer countDownTimer;
@@ -81,6 +82,25 @@ public class endpg extends AppCompatActivity {
         oofz.setText(hahaz6);
         //
 
+        l1 = (TextView) findViewById(R.id.l1);
+        String lab = getIntent().getStringExtra("le11");
+        l1.setText(lab);
+
+        l2 = (TextView) findViewById(R.id.l2);
+        String labe= getIntent().getStringExtra("le21");
+        l2.setText(labe);
+
+        l3 = (TextView) findViewById(R.id.l3);
+        String label = getIntent().getStringExtra("le31");
+        l3.setText(label);
+
+        l1.setVisibility(View.GONE);
+        l3.setVisibility(View.GONE);
+        l2.setVisibility(View.GONE);
+        oof.setVisibility(View.GONE);
+        oofz.setVisibility(View.GONE);
+
+
         btmtxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,13 +114,24 @@ public class endpg extends AppCompatActivity {
 
 
 
-
+                                    String calo = oof.getText().toString();
                                     String getzz6 = oofz.getText().toString();
+
+                                    String getl1 = l1.getText().toString();
+                                    String getlb1 = l2.getText().toString();
+                                    String getlbl1 = l3.getText().toString();
+
                                     Intent intent = new Intent(endpg.this, MainScreen.class);
                                     intent.putExtra("phoneNo", getzz6);
+                                    intent.putExtra("cal", calo);
+                                    intent.putExtra("fullname", getl1);
+                                    intent.putExtra("username", getlb1);
+                                    intent.putExtra("gender", getlbl1 );
 
 
                                     startActivity(intent);
+
+
                                 }
                                 else{
                                     Toast.makeText(endpg.this, "Data is sae and can not", Toast.LENGTH_SHORT).show();

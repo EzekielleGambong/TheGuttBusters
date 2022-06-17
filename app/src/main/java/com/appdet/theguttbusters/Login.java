@@ -77,11 +77,11 @@ public class Login extends AppCompatActivity {
                                     finish();
                                 }
                                 else{
-                                    Toast.makeText(Login.this, "wpass", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Login.this, "Please check your phone number and password or check your internet connection ", Toast.LENGTH_SHORT).show();
                                 }
                             }
                             else{
-                                Toast.makeText(Login.this, "wpass", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Please check your phone number and password or check your internet connection ", Toast.LENGTH_SHORT).show();
                             }
                         }
 

@@ -27,6 +27,7 @@ public class abswk4 extends AppCompatActivity {
     //copy
     TextView data, dataz;
     Double sum=0.0, add=3.5, addtxt;
+    TextView l1,l2, l3;
     Double finz=0.0, finztxt;
     Double initial;
     TextView datazz;
@@ -75,6 +76,14 @@ public class abswk4 extends AppCompatActivity {
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
 
+        l1.setVisibility(View.GONE);
+        l3.setVisibility(View.GONE);
+        l2.setVisibility(View.GONE);
+        data.setVisibility(View.GONE);
+        dataz.setVisibility(View.GONE);
+        datazz.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        bgprogress.setVisibility(View.GONE);
 
         //copy
         data = (TextView) findViewById(R.id.data);
@@ -92,7 +101,20 @@ public class abswk4 extends AppCompatActivity {
         datazz = (TextView) findViewById(R.id.datazz);
         String hahazz3 = getIntent().getStringExtra("tryzz3");
         datazz.setText(hahazz3);
-        //
+
+
+        l1 = (TextView) findViewById(R.id.l1);
+        String lab = getIntent().getStringExtra("le11");
+        l1.setText(lab);
+
+        l2 = (TextView) findViewById(R.id.l2);
+        String labe= getIntent().getStringExtra("le21");
+        l2.setText(labe);
+
+        l3 = (TextView) findViewById(R.id.l3);
+        String label = getIntent().getStringExtra("le31");
+        l3.setText(label);
+
 
         startTimer();
 
@@ -119,12 +141,19 @@ public class abswk4 extends AppCompatActivity {
                                 String get4 = data.getText().toString();
                                 String getz4 = dataz.getText().toString();
                                 String getzz4 = datazz.getText().toString();
+
+                                String getl1 = l1.getText().toString();
+                                String getlb1 = l2.getText().toString();
+                                String getlbl1 = l3.getText().toString();
+
                                 Intent intent = new Intent(abswk4.this, abswk5.class);
                                 intent.putExtra("try4", get4);
                                 intent.putExtra("tryz4", getz4);
-
-
                                 intent.putExtra("tryzz4", getzz4);
+
+                                intent.putExtra("le11", getl1);
+                                intent.putExtra("le21", getlb1);
+                                intent.putExtra("le31", getlbl1);
                                 //
                                 startActivity(intent);
 

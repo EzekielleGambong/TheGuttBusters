@@ -1,5 +1,6 @@
 package com.appdet.theguttbusters;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,14 +11,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainScreen extends AppCompatActivity {
 
     LinearLayout personalinfo, experience, review;
-    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn, imagine, ini;
+    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn, imagine, ini, deletebtn, lname,luser;
     Double imaginarytxt, imaginetxt;
 
 
@@ -39,9 +43,12 @@ public class MainScreen extends AppCompatActivity {
         personalinfobtn = findViewById(R.id.personalinfobtn);
         experiencebtn = findViewById(R.id.experiencebtn);
         reviewbtn = findViewById(R.id.reviewbtn);
+        lname = findViewById(R.id.lname);
+        luser = findViewById(R.id.luser);
         personalinfo.setVisibility(View.VISIBLE);
         experience.setVisibility(View.GONE);
         review.setVisibility(View.GONE);
+
         reference = FirebaseDatabase.getInstance().getReference("users");
 
         l1 = findViewById(R.id.l1);
@@ -56,10 +63,38 @@ public class MainScreen extends AppCompatActivity {
         legezbtn = findViewById(R.id.legseasy);
         shoulderezbtn = findViewById(R.id.shouldereasy);
         showAllUserData();
+        deletebtn = findViewById(R.id.deletebtn);
+
+        imaginary.setVisibility(View.GONE);
+        ini.setVisibility(View.GONE);
+        deletebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String dltdata = l4.getText().toString();
+                reference = FirebaseDatabase.getInstance().getReference("users");
+                reference.child(dltdata).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                        if (task.isSuccessful()){
+
+                            Toast.makeText(MainScreen.this,"Successfuly Deleted",Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(MainScreen.this, Login.class);
+                            startActivity(intent);
+
+                        }else {
+
+                            Toast.makeText(MainScreen.this,"Failed",Toast.LENGTH_SHORT).show();
 
 
+                        }
 
-
+                    }
+                });
+            }
+        });
 
         personalinfobtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +103,8 @@ public class MainScreen extends AppCompatActivity {
                 personalinfo.setVisibility(View.VISIBLE);
                 experience.setVisibility(View.GONE);
                 review.setVisibility(View.GONE);
+                imaginary.setVisibility(View.GONE);
+                ini.setVisibility(View.GONE);
                 personalinfobtn.setTextColor(getResources().getColor(R.color.blue));
                 experiencebtn.setTextColor(getResources().getColor(R.color.grey));
                 reviewbtn.setTextColor(getResources().getColor(R.color.grey));
@@ -122,10 +159,16 @@ public class MainScreen extends AppCompatActivity {
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
                                 String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
                                 Intent intent = new Intent(MainScreen.this, abswk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
                                 intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
                                 startActivity(intent);
 
                             }
@@ -273,6 +316,8 @@ public class MainScreen extends AppCompatActivity {
         l4.setText(user_gender);
         l3.setText(user_phoneNo);
         cal.setText(user_cal);
+       lname.setText(user_name);
+        luser.setText(user_username);
     }
 
 }

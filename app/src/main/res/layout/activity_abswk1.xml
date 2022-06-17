@@ -8,6 +8,12 @@
     tools:context=".abswk1">
 
     <LinearLayout
+        android:layout_width="415dp"
+        android:layout_height="347dp"
+        android:background="#39AFEA"
+        tools:layout_editor_absoluteX="-3dp" />
+
+    <LinearLayout
         android:id="@+id/fitone"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -22,6 +28,7 @@
         <ImageView
             android:layout_width="203dp"
             android:layout_height="183dp"
+
             android:src="@drawable/absw1" />
 
         <LinearLayout
@@ -70,6 +77,62 @@
 
             <TextView
                 android:id="@+id/datazz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="8dp"
+                android:text="W"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:fontFamily="@font/audiowide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fitone"/>
+
+            <TextView
+                android:id="@+id/l1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="8dp"
+                android:text="W"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:fontFamily="@font/audiowide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fitone" />
+
+            <TextView
+                android:id="@+id/l2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="8dp"
+                android:text="W"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:fontFamily="@font/audiowide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fitone" />
+
+            <TextView
+                android:id="@+id/l3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="8dp"
+                android:text="W"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:fontFamily="@font/audiowide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fitone" />
+
+            <TextView
+                android:id="@+id/l4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"

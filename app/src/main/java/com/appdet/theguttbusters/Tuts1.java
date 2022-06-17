@@ -3,7 +3,9 @@ package com.appdet.theguttbusters;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -20,6 +22,19 @@ public class Tuts1 extends AppCompatActivity {
 
     TextView[] dots;
     ViewPagerAdapter viewPagerAdapter;
+    String prevStarted = "yes";
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        if (!sharedpreferences.getBoolean(prevStarted, false)) {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean(prevStarted, Boolean.TRUE);
+            editor.apply();
+        } else {
+            moveToSecondary();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +66,7 @@ public class Tuts1 extends AppCompatActivity {
                     mSLideViewPager.setCurrentItem(getitem(1),true);
                 else {
 
-                    Intent i = new Intent(Tuts1.this,MainScreen.class);
+                    Intent i = new Intent(Tuts1.this,Login.class);
                     startActivity(i);
                     finish();
 
@@ -65,7 +80,7 @@ public class Tuts1 extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent i = new Intent(Tuts1.this,MainScreen.class);
+                Intent i = new Intent(Tuts1.this,Login.class);
                 startActivity(i);
                 finish();
 
@@ -135,6 +150,12 @@ public class Tuts1 extends AppCompatActivity {
     private int getitem(int i){
 
         return mSLideViewPager.getCurrentItem() + i;
+    }
+
+    public void moveToSecondary(){
+        // use an intent to travel from one activity to another.
+        Intent intent = new Intent(this,Login.class);
+        startActivity(intent);
     }
 
 }

@@ -119,10 +119,11 @@ public class Register extends AppCompatActivity  {
         String password = payb.getEditText().getText().toString();
         String cal = viss.getText().toString();
 
+
+
         UserHelperClass helperClass = new UserHelperClass(phoneNo, username, fullname,gender, password, cal);
 
         refrence.child(phoneNo).setValue(helperClass);
-
     }
 
 }
