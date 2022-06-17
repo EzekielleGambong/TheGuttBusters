@@ -76,14 +76,6 @@ public class abswk3 extends AppCompatActivity {
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
 
-        l1.setVisibility(View.GONE);
-        l3.setVisibility(View.GONE);
-        l2.setVisibility(View.GONE);
-        data.setVisibility(View.GONE);
-        dataz.setVisibility(View.GONE);
-        datazz.setVisibility(View.GONE);
-        btnexercise.setVisibility(View.GONE);
-        bgprogress.setVisibility(View.GONE);
 
         //copy
         data = (TextView) findViewById(R.id.data);
@@ -124,7 +116,14 @@ public class abswk3 extends AppCompatActivity {
 
         initial = add * finztxt;
         sum = initial + addtxt;
-
+        l1.setVisibility(View.GONE);
+        l3.setVisibility(View.GONE);
+        l2.setVisibility(View.GONE);
+        data.setVisibility(View.GONE);
+        dataz.setVisibility(View.GONE);
+        datazz.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        bgprogress.setVisibility(View.GONE);
 
         data.setText(Double.toString(sum));
         btnexercise.setOnClickListener(new View.OnClickListener() {

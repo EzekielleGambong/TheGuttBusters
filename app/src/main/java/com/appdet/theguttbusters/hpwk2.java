@@ -1,5 +1,6 @@
 package com.appdet.theguttbusters;
 
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,16 +14,19 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
 public class hpwk2 extends AppCompatActivity {
+
     TextView intropage, subintropage, fitonetitle, fitonedesc, timerValue, btnexercise;
     View divpage, bgprogress;
     LinearLayout fitone;
     ImageView imgTimer;
     //
     TextView data, dataz, datazz;
+    TextView l1,l2, l3;
     Integer numz;
     //
     Double sum=0.0, add=3.5, addtxt;
@@ -38,7 +42,7 @@ public class hpwk2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abswk1);
+        setContentView(R.layout.activity_hpwk2);
 
 
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree);
@@ -76,6 +80,7 @@ public class hpwk2 extends AppCompatActivity {
 
         data = (TextView) findViewById(R.id.data);
         dataz = (TextView) findViewById(R.id.dataz);
+        datazz = (TextView) findViewById(R.id.datazz);
 
 
 
@@ -83,9 +88,28 @@ public class hpwk2 extends AppCompatActivity {
 
         String haha = getIntent().getStringExtra("try");
         String hahaz = getIntent().getStringExtra("tryz");
-
         data.setText(haha);
         dataz.setText(hahaz);
+
+
+
+        datazz = (TextView) findViewById(R.id.datazz);
+        String hahazz = getIntent().getStringExtra("tryzz");
+        datazz.setText(hahazz);
+
+
+
+        l1 = (TextView) findViewById(R.id.l1);
+        String lab = getIntent().getStringExtra("le1");
+        l1.setText(lab);
+
+        l2 = (TextView) findViewById(R.id.l2);
+        String labe= getIntent().getStringExtra("le2");
+        l2.setText(labe);
+
+        l3 = (TextView) findViewById(R.id.l3);
+        String label = getIntent().getStringExtra("le3");
+        l3.setText(label);
 
 
 
@@ -101,6 +125,14 @@ public class hpwk2 extends AppCompatActivity {
 
         sum = add + addtxt;
         finz = sum * finztxt;
+        l1.setVisibility(View.GONE);
+        l3.setVisibility(View.GONE);
+        l2.setVisibility(View.GONE);
+        data.setVisibility(View.GONE);
+        dataz.setVisibility(View.GONE);
+        datazz.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        bgprogress.setVisibility(View.GONE);
         data.setText(Double.toString(finz));
         btnexercise.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,9 +145,21 @@ public class hpwk2 extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 String get1 = data.getText().toString();
                                 String getz1 = dataz.getText().toString();
-                                Intent intent = new Intent(hpwk2.this, hpwk3.class);
+                                String getzz1 = datazz.getText().toString();
+
+                                String getl1 = l1.getText().toString();
+                                String getlb1 = l2.getText().toString();
+                                String getlbl1 = l3.getText().toString();
+
+                                Intent intent = new Intent(hpwk2.this,hpwk3.class);
                                 intent.putExtra("try1", get1);
                                 intent.putExtra("tryz1", getz1);
+                                intent.putExtra("tryzz1", getzz1);
+
+                                intent.putExtra("le11", getl1);
+                                intent.putExtra("le21", getlb1);
+                                intent.putExtra("le31", getlbl1);
+
                                 startActivity(intent);
 
 
@@ -148,11 +192,8 @@ public class hpwk2 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                //copy
-
-
-
-                //
+                btnexercise.setVisibility(View.VISIBLE);
+                bgprogress.setVisibility(View.VISIBLE);
 
             }
         }.start();
@@ -166,4 +207,5 @@ public class hpwk2 extends AppCompatActivity {
         String timeLeft = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds) ;
         timerValue.setText(timeLeft);
     }
+
 }

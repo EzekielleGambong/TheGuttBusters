@@ -1,6 +1,4 @@
 package com.appdet.theguttbusters;
-
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -76,14 +74,6 @@ public class abswk1 extends AppCompatActivity {
         timerValue.startAnimation(alphago);
         imgTimer.startAnimation(alphago);
 
-        l1.setVisibility(View.GONE);
-       l3.setVisibility(View.GONE);
-        l2.setVisibility(View.GONE);
-        data.setVisibility(View.GONE);
-        dataz.setVisibility(View.GONE);
-        datazz.setVisibility(View.GONE);
-        btnexercise.setVisibility(View.GONE);
-        bgprogress.setVisibility(View.GONE);
 
         data = (TextView) findViewById(R.id.data);
         dataz = (TextView) findViewById(R.id.dataz);
@@ -98,7 +88,7 @@ public class abswk1 extends AppCompatActivity {
         data.setText(haha);
         dataz.setText(hahaz);
 
-        
+
 
         datazz = (TextView) findViewById(R.id.datazz);
         String hahazz = getIntent().getStringExtra("tryzz");
@@ -129,6 +119,14 @@ public class abswk1 extends AppCompatActivity {
             addtxt = Double.parseDouble(data.getText().toString());
         if(dataz.getText().toString().length() > 0)
             finztxt = Double.parseDouble(dataz.getText().toString());
+        l1.setVisibility(View.GONE);
+        l3.setVisibility(View.GONE);
+        l2.setVisibility(View.GONE);
+        data.setVisibility(View.GONE);
+        dataz.setVisibility(View.GONE);
+        datazz.setVisibility(View.GONE);
+        btnexercise.setVisibility(View.GONE);
+        bgprogress.setVisibility(View.GONE);
 
         sum = add + addtxt;
         finz = sum * finztxt;

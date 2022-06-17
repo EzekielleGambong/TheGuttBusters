@@ -21,9 +21,9 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainScreen extends AppCompatActivity {
 
     LinearLayout personalinfo, experience, review;
-    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn, imagine, ini, deletebtn, lname,luser;
+    TextView personalinfobtn, experiencebtn, reviewbtn, l1, l2, l3, l4, ezbtn, cal, imaginary, legezbtn, shoulderezbtn, hipezbtn, imagine, ini, deletebtn, lname,luser,chesteasy;
     Double imaginarytxt, imaginetxt;
-
+TextView absmid, abshard, hipmid, hiphard, chesthard, chestmid;
 
 
 
@@ -64,7 +64,13 @@ public class MainScreen extends AppCompatActivity {
         shoulderezbtn = findViewById(R.id.shouldereasy);
         showAllUserData();
         deletebtn = findViewById(R.id.deletebtn);
-
+        chesthard= findViewById(R.id.chesthard);
+        chestmid = findViewById(R.id.chestmid);
+        chesteasy = findViewById(R.id.chesteasy);
+        abshard= findViewById(R.id.abshard);
+        absmid = findViewById(R.id.absmid);
+        hiphard= findViewById(R.id.hiphard);
+        hipmid = findViewById(R.id.hipmid);
         imaginary.setVisibility(View.GONE);
         ini.setVisibility(View.GONE);
         deletebtn.setOnClickListener(new View.OnClickListener() {
@@ -162,6 +168,101 @@ public class MainScreen extends AppCompatActivity {
                                 String line1 = l1.getText().toString();
                                 String line2= l2.getText().toString();
                                 String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this,  abswk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+
+        absmid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 2.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this,  abswk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+
+
+        abshard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 3.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
                                 Intent intent = new Intent(MainScreen.this, abswk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
@@ -186,7 +287,10 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
-        legezbtn.setOnClickListener(new View.OnClickListener() {
+
+        ////////
+
+        chesteasy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
@@ -204,9 +308,17 @@ public class MainScreen extends AppCompatActivity {
 
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
-                                Intent intent = new Intent(MainScreen.this, abswk1.class);
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this,  chwk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
                                 startActivity(intent);
 
                             }
@@ -224,7 +336,8 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
-        shoulderezbtn.setOnClickListener(new View.OnClickListener() {
+
+        chestmid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
@@ -236,15 +349,23 @@ public class MainScreen extends AppCompatActivity {
                                 if(imaginary.getText().toString().length() > 0)
                                     imaginarytxt = Double.parseDouble(imaginary.getText().toString());
 
-                                imaginarytxt = imaginarytxt + 1.0;
+                                imaginarytxt = imaginarytxt + 2.0;
                                 imaginary.setText(Double.toString(imaginarytxt));
 
 
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
-                                Intent intent = new Intent(MainScreen.this, shwk1.class);
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this,  chwk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
                                 startActivity(intent);
 
                             }
@@ -261,6 +382,58 @@ public class MainScreen extends AppCompatActivity {
                 alertDialog.show();
             }
         });
+
+
+
+        chesthard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 3.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this, chwk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+
+        ////////////
+
 
         hipezbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -280,9 +453,17 @@ public class MainScreen extends AppCompatActivity {
 
                                 String get = cal.getText().toString();
                                 String getz = imaginary.getText().toString();
-                                Intent intent = new Intent(MainScreen.this, abswk1.class);
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this,  hpwk1.class);
                                 intent.putExtra("try", get);
                                 intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
                                 startActivity(intent);
 
                             }
@@ -301,6 +482,99 @@ public class MainScreen extends AppCompatActivity {
         });
 
 
+        hipmid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 2.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this,  hpwk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
+
+
+
+        hiphard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_builder = new AlertDialog.Builder(MainScreen.this);
+                alert_builder.setMessage("You clicked easy mode. Kindly clicked 'Yes' to proceed")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(imaginary.getText().toString().length() > 0)
+                                    imaginarytxt = Double.parseDouble(imaginary.getText().toString());
+
+                                imaginarytxt = imaginarytxt + 3.0;
+                                imaginary.setText(Double.toString(imaginarytxt));
+
+
+                                String get = cal.getText().toString();
+                                String getz = imaginary.getText().toString();
+                                String getzz = l4.getText().toString();
+                                String line1 = l1.getText().toString();
+                                String line2= l2.getText().toString();
+                                String line3 = l3.getText().toString();
+                                Intent intent = new Intent(MainScreen.this, hpwk1.class);
+                                intent.putExtra("try", get);
+                                intent.putExtra("tryz", getz);
+                                intent.putExtra("tryzz", getzz);
+                                intent.putExtra("le1", line1);
+                                intent.putExtra("le2", line2);
+                                intent.putExtra("le3", line3);
+                                startActivity(intent);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alert_builder.create();
+                alertDialog.setTitle("WARNING");
+                alertDialog.show();
+            }
+        });
     }
 
     private void showAllUserData() {
